@@ -1,0 +1,13 @@
+C:\Users\hasan\OneDrive\OneDrive\Belgeler\Ben\Projeler\Visual STudio IDE ProjecTs\XML İle Döviz Kuru Cekme\XML İle Döviz Kuru Cekme\bin\Debug\XML İle Döviz Kuru Cekme.exe.config
+C:\Users\hasan\OneDrive\OneDrive\Belgeler\Ben\Projeler\Visual STudio IDE ProjecTs\XML İle Döviz Kuru Cekme\XML İle Döviz Kuru Cekme\bin\Debug\XML İle Döviz Kuru Cekme.exe
+C:\Users\hasan\OneDrive\OneDrive\Belgeler\Ben\Projeler\Visual STudio IDE ProjecTs\XML İle Döviz Kuru Cekme\XML İle Döviz Kuru Cekme\bin\Debug\XML İle Döviz Kuru Cekme.pdb
+C:\Users\hasan\OneDrive\OneDrive\Belgeler\Ben\Projeler\Visual STudio IDE ProjecTs\XML İle Döviz Kuru Cekme\XML İle Döviz Kuru Cekme\obj\Debug\XML İle Döviz Kuru Cekme.csproj.AssemblyReference.cache
+C:\Users\hasan\OneDrive\OneDrive\Belgeler\Ben\Projeler\Visual STudio IDE ProjecTs\XML İle Döviz Kuru Cekme\XML İle Döviz Kuru Cekme\obj\Debug\XML İle Döviz Kuru Cekme.csproj.CoreCompileInputs.cache
+C:\Users\hasan\OneDrive\OneDrive\Belgeler\Ben\Projeler\Visual STudio IDE ProjecTs\XML İle Döviz Kuru Cekme\XML İle Döviz Kuru Cekme\obj\Debug\XML İle Döviz Kuru Cekme.exe
+C:\Users\hasan\OneDrive\OneDrive\Belgeler\Ben\Projeler\Visual STudio IDE ProjecTs\XML İle Döviz Kuru Cekme\XML İle Döviz Kuru Cekme\obj\Debug\XML İle Döviz Kuru Cekme.pdb
+C:\Users\hasan\OneDrive\OneDrive\Belgeler\Ben\Projeler\Visual STudio IDE ProjecTs\XML İle Döviz Kuru Cekme\XML İle Döviz Kuru Cekme\bin\Debug\EntityFramework.dll
+C:\Users\hasan\OneDrive\OneDrive\Belgeler\Ben\Projeler\Visual STudio IDE ProjecTs\XML İle Döviz Kuru Cekme\XML İle Döviz Kuru Cekme\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\hasan\OneDrive\OneDrive\Belgeler\Ben\Projeler\Visual STudio IDE ProjecTs\XML İle Döviz Kuru Cekme\XML İle Döviz Kuru Cekme\bin\Debug\EntityFramework.xml
+C:\Users\hasan\OneDrive\OneDrive\Belgeler\Ben\Projeler\Visual STudio IDE ProjecTs\XML İle Döviz Kuru Cekme\XML İle Döviz Kuru Cekme\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\hasan\OneDrive\OneDrive\Belgeler\Ben\Projeler\Visual STudio IDE ProjecTs\XML İle Döviz Kuru Cekme\XML İle Döviz Kuru Cekme\obj\Debug\XML _le .7149EC89.Up2Date
+C:\Users\hasan\OneDrive\OneDrive\Belgeler\Ben\Projeler\Visual STudio IDE ProjecTs\XML İle Döviz Kuru Cekme\XML İle Döviz Kuru Cekme\obj\Debug\XML İle Döviz Kuru Cekme.exe.config

@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ConsoledbProjeModelStoreContainer" CdmEntityContainer="ConsoledbProjeEntities">
+    <EntitySetMapping Name="Tablocurrency">
+      <EntityTypeMapping TypeName="ConsoledbProjeModel.Tablocurrency">
+        <MappingFragment StoreEntitySet="Tablocurrency">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="kurisim" ColumnName="kurisim" />
+          <ScalarProperty Name="kursembol" ColumnName="kursembol" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tablocurrencyvalues">
+      <EntityTypeMapping TypeName="ConsoledbProjeModel.Tablocurrencyvalues">
+        <MappingFragment StoreEntitySet="Tablocurrencyvalues">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="kurID" ColumnName="kurID" />
+          <ScalarProperty Name="kuralisfiyat" ColumnName="kuralisfiyat" />
+          <ScalarProperty Name="kursatisfiyat" ColumnName="kursatisfiyat" />
+          <ScalarProperty Name="tarih" ColumnName="tarih" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tabloislem">
+      <EntityTypeMapping TypeName="ConsoledbProjeModel.Tabloislem">
+        <MappingFragment StoreEntitySet="Tabloislem">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="musteriisim" ColumnName="musteriisim" />
+          <ScalarProperty Name="musterisoyisim" ColumnName="musterisoyisim" />
+          <ScalarProperty Name="kurID" ColumnName="kurID" />
+          <ScalarProperty Name="islemturu" ColumnName="islemturu" />
+          <ScalarProperty Name="gunceldegeri" ColumnName="gunceldegeri" />
+          <ScalarProperty Name="miktar" ColumnName="miktar" />
+          <ScalarProperty Name="toplamucret" ColumnName="toplamucret" />
+          <ScalarProperty Name="tarih" ColumnName="tarih" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

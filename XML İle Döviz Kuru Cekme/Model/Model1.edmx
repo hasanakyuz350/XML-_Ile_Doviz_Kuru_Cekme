@@ -1,0 +1,219 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="ConsoledbProjeModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Tablocurrency">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="kurisim" Type="nvarchar" MaxLength="50" />
+          <Property Name="kursembol" Type="nchar" MaxLength="1" />
+        </EntityType>
+        <EntityType Name="Tablocurrencyvalues">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="kurID" Type="int" />
+          <Property Name="kuralisfiyat" Type="decimal" Precision="18" Scale="4" />
+          <Property Name="kursatisfiyat" Type="decimal" Precision="18" Scale="4" />
+          <Property Name="tarih" Type="date" />
+        </EntityType>
+        <EntityType Name="Tabloislem">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="musteriisim" Type="nvarchar" MaxLength="50" />
+          <Property Name="musterisoyisim" Type="nvarchar" MaxLength="50" />
+          <Property Name="kurID" Type="int" />
+          <Property Name="islemturu" Type="nvarchar" MaxLength="10" />
+          <Property Name="gunceldegeri" Type="decimal" Precision="18" Scale="4" />
+          <Property Name="miktar" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="toplamucret" Type="decimal" Precision="18" Scale="4" />
+          <Property Name="tarih" Type="date" />
+        </EntityType>
+        <Association Name="FK_Tablocurrencyvalues_Tablocurrency">
+          <End Role="Tablocurrency" Type="Self.Tablocurrency" Multiplicity="0..1" />
+          <End Role="Tablocurrencyvalues" Type="Self.Tablocurrencyvalues" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Tablocurrency">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Tablocurrencyvalues">
+              <PropertyRef Name="kurID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Tabloislem_Tablocurrency">
+          <End Role="Tablocurrency" Type="Self.Tablocurrency" Multiplicity="0..1" />
+          <End Role="Tabloislem" Type="Self.Tabloislem" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Tablocurrency">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Tabloislem">
+              <PropertyRef Name="kurID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="ConsoledbProjeModelStoreContainer">
+          <EntitySet Name="Tablocurrency" EntityType="Self.Tablocurrency" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Tablocurrencyvalues" EntityType="Self.Tablocurrencyvalues" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Tabloislem" EntityType="Self.Tabloislem" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_Tablocurrencyvalues_Tablocurrency" Association="Self.FK_Tablocurrencyvalues_Tablocurrency">
+            <End Role="Tablocurrency" EntitySet="Tablocurrency" />
+            <End Role="Tablocurrencyvalues" EntitySet="Tablocurrencyvalues" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Tabloislem_Tablocurrency" Association="Self.FK_Tabloislem_Tablocurrency">
+            <End Role="Tablocurrency" EntitySet="Tablocurrency" />
+            <End Role="Tabloislem" EntitySet="Tabloislem" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="ConsoledbProjeModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Tablocurrency">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="kurisim" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="kursembol" Type="String" MaxLength="1" FixedLength="true" Unicode="true" />
+          <NavigationProperty Name="Tablocurrencyvalues" Relationship="Self.FK_Tablocurrencyvalues_Tablocurrency" FromRole="Tablocurrency" ToRole="Tablocurrencyvalues" />
+          <NavigationProperty Name="Tabloislem" Relationship="Self.FK_Tabloislem_Tablocurrency" FromRole="Tablocurrency" ToRole="Tabloislem" />
+        </EntityType>
+        <EntityType Name="Tablocurrencyvalues">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="kurID" Type="Int32" />
+          <Property Name="kuralisfiyat" Type="Decimal" Precision="18" Scale="4" />
+          <Property Name="kursatisfiyat" Type="Decimal" Precision="18" Scale="4" />
+          <Property Name="tarih" Type="DateTime" Precision="0" />
+          <NavigationProperty Name="Tablocurrency" Relationship="Self.FK_Tablocurrencyvalues_Tablocurrency" FromRole="Tablocurrencyvalues" ToRole="Tablocurrency" />
+        </EntityType>
+        <EntityType Name="Tabloislem">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="musteriisim" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="musterisoyisim" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="kurID" Type="Int32" />
+          <Property Name="islemturu" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="gunceldegeri" Type="Decimal" Precision="18" Scale="4" />
+          <Property Name="miktar" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="toplamucret" Type="Decimal" Precision="18" Scale="4" />
+          <Property Name="tarih" Type="DateTime" Precision="0" />
+          <NavigationProperty Name="Tablocurrency" Relationship="Self.FK_Tabloislem_Tablocurrency" FromRole="Tabloislem" ToRole="Tablocurrency" />
+        </EntityType>
+        <Association Name="FK_Tablocurrencyvalues_Tablocurrency">
+          <End Role="Tablocurrency" Type="Self.Tablocurrency" Multiplicity="0..1" />
+          <End Role="Tablocurrencyvalues" Type="Self.Tablocurrencyvalues" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Tablocurrency">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Tablocurrencyvalues">
+              <PropertyRef Name="kurID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Tabloislem_Tablocurrency">
+          <End Role="Tablocurrency" Type="Self.Tablocurrency" Multiplicity="0..1" />
+          <End Role="Tabloislem" Type="Self.Tabloislem" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Tablocurrency">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Tabloislem">
+              <PropertyRef Name="kurID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="ConsoledbProjeEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Tablocurrency" EntityType="Self.Tablocurrency" />
+          <EntitySet Name="Tablocurrencyvalues" EntityType="Self.Tablocurrencyvalues" />
+          <EntitySet Name="Tabloislem" EntityType="Self.Tabloislem" />
+          <AssociationSet Name="FK_Tablocurrencyvalues_Tablocurrency" Association="Self.FK_Tablocurrencyvalues_Tablocurrency">
+            <End Role="Tablocurrency" EntitySet="Tablocurrency" />
+            <End Role="Tablocurrencyvalues" EntitySet="Tablocurrencyvalues" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Tabloislem_Tablocurrency" Association="Self.FK_Tabloislem_Tablocurrency">
+            <End Role="Tablocurrency" EntitySet="Tablocurrency" />
+            <End Role="Tabloislem" EntitySet="Tabloislem" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="ConsoledbProjeModelStoreContainer" CdmEntityContainer="ConsoledbProjeEntities">
+          <EntitySetMapping Name="Tablocurrency">
+            <EntityTypeMapping TypeName="ConsoledbProjeModel.Tablocurrency">
+              <MappingFragment StoreEntitySet="Tablocurrency">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="kurisim" ColumnName="kurisim" />
+                <ScalarProperty Name="kursembol" ColumnName="kursembol" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Tablocurrencyvalues">
+            <EntityTypeMapping TypeName="ConsoledbProjeModel.Tablocurrencyvalues">
+              <MappingFragment StoreEntitySet="Tablocurrencyvalues">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="kurID" ColumnName="kurID" />
+                <ScalarProperty Name="kuralisfiyat" ColumnName="kuralisfiyat" />
+                <ScalarProperty Name="kursatisfiyat" ColumnName="kursatisfiyat" />
+                <ScalarProperty Name="tarih" ColumnName="tarih" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Tabloislem">
+            <EntityTypeMapping TypeName="ConsoledbProjeModel.Tabloislem">
+              <MappingFragment StoreEntitySet="Tabloislem">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="musteriisim" ColumnName="musteriisim" />
+                <ScalarProperty Name="musterisoyisim" ColumnName="musterisoyisim" />
+                <ScalarProperty Name="kurID" ColumnName="kurID" />
+                <ScalarProperty Name="islemturu" ColumnName="islemturu" />
+                <ScalarProperty Name="gunceldegeri" ColumnName="gunceldegeri" />
+                <ScalarProperty Name="miktar" ColumnName="miktar" />
+                <ScalarProperty Name="toplamucret" ColumnName="toplamucret" />
+                <ScalarProperty Name="tarih" ColumnName="tarih" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
