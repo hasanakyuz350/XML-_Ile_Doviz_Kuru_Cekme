@@ -27,7 +27,7 @@ Bu proje, C# konsol uygulaması olarak geliştirilmiş basit bir döviz yönetim
 
 -Projeyi kopyalayın
 
-*Bu git komutunu git bash terminalinde çalıştırarak projeyi kopyalıyabilirsiniz: git clone https://github.com/kullaniciAdi/proje-adi.git
+*Bu git komutunu git bash terminalinde çalıştırarak projeyi kopyalıyabilirsiniz: git clone REPOSITORY URL.git
 
 -Visual Studio ile projeyi açın.
 
