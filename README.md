@@ -2,6 +2,8 @@
 
 Bu proje, C# konsol uygulaması olarak geliştirilmiş basit bir döviz yönetim sistemidir. TCMB (Türkiye Cumhuriyet Merkez Bankası) XML servisleri kullanılarak güncel döviz kurları çekilir. Kullanıcı, veri tabanına kayıtlı kurlar üzerinden alış ve satış işlemleri yapabilir, geçmiş işlemleri görüntüleyebilir.
 
+---
+
 🚀 Özellikler
 
 - **XML ile TCMB'den döviz kurlarını çekme
@@ -14,6 +16,8 @@ Bu proje, C# konsol uygulaması olarak geliştirilmiş basit bir döviz yönetim
 - **
 - **Veri tabanı ile işlem ve kur saklama
 
+---
+
 🛠️ Kullanılan Teknolojiler
 
 - **C# (.NET)
@@ -24,6 +28,7 @@ Bu proje, C# konsol uygulaması olarak geliştirilmiş basit bir döviz yönetim
 - **
 - **SQL (veri tabanı)
 
+---
 
 📂 Proje Yapısı
 
@@ -52,6 +57,7 @@ Ana Program
  - **Program.cs
  - **App.config
 
+---
 
 📌 Notlar
 
