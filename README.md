@@ -4,40 +4,57 @@ Bu proje, C# konsol uygulaması olarak geliştirilmiş basit bir döviz yönetim
 
 🚀 Özellikler
 
-📡-XML ile TCMB'den döviz kurlarını çekme
-
-➕-Kur ekleme / güncelleme
-
-💰-Alış ve satış işlemleri gerçekleştirme
-
-📋-Yapılan işlemleri listeleme
-
-🗃️-Veri tabanı ile işlem ve kur saklama
+- **XML ile TCMB'den döviz kurlarını çekme
+- **
+- **Kur ekleme / güncelleme
+- **
+- **Alış ve satış işlemleri gerçekleştirme
+- **
+- **Yapılan işlemleri listeleme
+- **
+- **Veri tabanı ile işlem ve kur saklama
 
 🛠️ Kullanılan Teknolojiler
 
--C# (.NET)
+- **C# (.NET)
+- **
+- **XML veri çekme
+- **
+- **Entity Framework (veri tabanı işlemleri için)
+- **
+- **SQL (veri tabanı)
 
--XML veri çekme
 
--Entity Framework (veri tabanı işlemleri için)
+📂 Proje Yapısı
 
--SQL (veri tabanı)
+ Classes
 
-⚙️ Kurulum
+- ** islem.cs                                
+- ** islemlisTele.cs                         
+- ** kurlisTele_guncelkurlisTele_kurkaydeT.cs
+- ** kuru_al.cs                              
+- ** orTakbaglanTi.cs                        
+- ** showinfo.cs                             
 
--Projeyi kopyalayın
+ DaTabase
 
-*Bu git komutunu git bash terminalinde çalıştırarak projeyi kopyalıyabilirsiniz: git clone REPOSITORY URL.git
+ - **script.sql
 
--Visual Studio ile projeyi açın.
+ Model
 
--Gerekli bağlantı dizesini (connection string) kendi veri tabanınıza göre düzenleyin.
+- **Model1.edmx 
+- **Tablocurrency.cs
+- **Tablocurrencyvalues.cs
+- **Tabloislem.cs
 
--Uygulamayı çalıştırın.
+Ana Program
+
+ - **Program.cs
+ - **App.config
+
 
 📌 Notlar
 
--TCMB XML servisi sadece mesai saatlerinde veri sağlar. Hafta sonu ve tatil günlerinde kur verisi bulunmayabilir.
+- **TCMB XML servisi sadece mesai saatlerinde veri sağlar. Hafta sonu ve tatil günlerinde kur verisi bulunmayabilir.
 
--Proje geliştirme amaçlıdır, ticari kullanım için optimize edilmemiştir.
+- **Proje geliştirme amaçlıdır, ticari kullanım için optimize edilmemiştir.
